@@ -1,0 +1,20 @@
+{
+    "license": "Write me!",
+    "source-url": "Write me!",
+    "auth": "Write me!",
+    "depends": ["LogP6"],
+    "provides": {
+        "LogP6::Writer::Journald": "lib/LogP6/Writer/Journald.pm6",
+        "LogP6::WriterConf::Journald": "lib/LogP6/WriterConf/Journald.pm6"
+    },
+    "name": "p6-logp6-writer-jounrald",
+    "description": "Write me!",
+    "resources": [],
+    "perl": "6.*",
+    "test-depends": [
+        "LogP6",
+        "Test"
+    ],
+    "build-depends": [],
+    "version": "0.1"
+}
