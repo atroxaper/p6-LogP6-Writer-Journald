@@ -16,7 +16,7 @@ sub systemd-exists() {
 }
 
 unless systemd-exists() {
-	skip-rest('did not find systemd library');
+	skip-rest('did not find "systemd" library. install libsystemd-dev (Ubuntu)');
 	done-testing;
 	exit;
 }
@@ -26,7 +26,7 @@ my $args = ['MESSAGE=log-p6-writer-systemd-test', 'PRIORITY=4'];
 $args.push("PARAM_$_=value_$_") for 1..33;
 
 for 0..^$args.elems -> $elems {
-	lives-ok { $systemd.send(|$args[0..$elems], Str) }, "send with $elems elems";
+	lives-ok { $systemd.send(|$args[0..$elems]) }, "send with $elems elems";
 }
 
 done-testing;
