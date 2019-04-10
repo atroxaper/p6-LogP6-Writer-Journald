@@ -53,6 +53,10 @@ All assignments that do not follow this syntax will be ignored. Default `False`;
 `CODE_FUNC=` field will be written automatically based on `callframe`. Default
 `False`;
 
+Note that using `use-code-file`, `use-code-line` or `use-code-func` properties
+will slow your program because it requires several `callframe` calls on each
+resultative log call;
+
 Also you can configure the writer in configuration file uses `custom` type
 writer and `"fqn-class": "LogP6::WriterConf::Journald"` as any other
 configurations in LogP6.
