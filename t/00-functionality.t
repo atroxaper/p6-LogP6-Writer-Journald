@@ -10,7 +10,8 @@ plan 4;
 
 writer(LogP6::WriterConf::Journald.new(
 	:name<journald-1>, :systemd(Custom::TestSystemd.new), :pattern('%level %msg'),
-	:use-priority, :use-code-line, :use-code-file, :use-code-func, :use-mdc
+	:use-priority, :use-code-line, :use-code-file, :use-code-func, :use-mdc,
+	:auto-exceptions
 ));
 
 writer(LogP6::WriterConf::Journald.new(

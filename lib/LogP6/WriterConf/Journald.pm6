@@ -30,8 +30,8 @@ class Journald::CodeFunc does LogP6::WriterConf::Pattern::PatternPart {
 class Journald::MDC does LogP6::WriterConf::Pattern::PatternPart {
 	method show($context) {
 		my $result = $context.mdc.kv.map(-> $k, $v {$k ~ '=' ~ $v}).List;
-		return $result[0..30] if $result.elems > 30;
-		return $result;
+		return |$result[0..30] if $result.elems > 30;
+		return |$result;
 	}
 }
 

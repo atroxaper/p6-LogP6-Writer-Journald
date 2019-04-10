@@ -2,7 +2,10 @@ use NativeCall;
 use LogP6::Writer;
 use LogP6::WriterConf::Pattern;
 
+#| Class for sender log message to journald service.
 role LogP6::Writer::Journald::Systemd {
+	#|[Send message to journald.
+	#| @fields - journald fields in format '<filed-name>=<field-value>']
 	method send(*@fields) { ... }
 }
 
@@ -106,6 +109,7 @@ class LogP6::Writer::Journald::Systemd::Native
 		&send31, &send32, &send33, &send34, &send35];
 
 	method send(*@fields) {
-		@!send-array[@fields.elems](|@fields, Str);
+		my $grep = @fields.grep(*.defined).List;
+		@!send-array[$grep.elems](|$grep, Str);
 	}
 }
