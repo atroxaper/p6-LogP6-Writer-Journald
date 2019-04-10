@@ -23,7 +23,7 @@ unless systemd-exists() {
 
 my LogP6::Writer::Journald::Systemd::Native $systemd .= new;
 my $args = ['MESSAGE=log-p6-writer-systemd-test', 'PRIORITY=4'];
-$args.push("PARAM_$_=value_$_") for 1..35;
+$args.push("PARAM_$_=value_$_") for 1..33;
 
 for 0..^$args.elems -> $elems {
 	lives-ok { $systemd.send(|$args[0..$elems]) }, "send with $elems elems";
