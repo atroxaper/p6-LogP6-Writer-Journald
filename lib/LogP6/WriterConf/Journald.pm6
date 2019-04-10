@@ -78,15 +78,3 @@ class LogP6::WriterConf::Journald does LogP6::WriterConf {
 		# do nothing
 	}
 }
-
-module Factory {
-	sub writer-conf-journald(:$name!, :$pattern!, Bool :$auto-exceptions,
-					Bool :$use-priority, Bool :$use-code-file, Bool :$use-code-line,
-					Bool :$use-code-func, LogP6::Writer::Journald::Systemd :$systemd,
-					Bool :$use-mdc
-					) is export {
-		LogP6::WriterConf::Journald.new(:$name, :$pattern, :$auto-exceptions,
-						:$use-priority, :$use-code-file, :$use-code-line, :$use-code-func, :$systemd,
-						:$use-mdc);
-	}
-}
