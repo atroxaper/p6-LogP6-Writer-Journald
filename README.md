@@ -121,8 +121,9 @@ sudo apt-get install libsystemd-dev
 
 Mikhail Khorkov <atroxaper@cpan.org>
 
-Source can be located at: https://github.com/atroxaper/p6-LogP6-Writer-Journald.
-Comments and Pull Requests are welcome.
+Source can be located at:
+[github](https://github.com/atroxaper/p6-LogP6-Writer-Journald). Comments and
+Pull Requests are welcome.
 
 # COPYRIGHT AND LICENSE
 

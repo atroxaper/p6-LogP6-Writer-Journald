@@ -1,6 +1,6 @@
 {
     "license": "Artistic-2.0",
-    "source-url": "https://github.com/atroxaper/p6-LogP6-Writer-Journald.git",
+    "source-url": "git://github.com/atroxaper/p6-LogP6-Writer-Journald.git",
     "auth": "github:atroxaper",
     "depends": ["LogP6"],
     "provides": {
