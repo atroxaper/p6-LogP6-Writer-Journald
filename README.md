@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/atroxaper/p6-LogP6-Writer-Journald.svg?branch=master)](https://travis-ci.org/atroxaper/p6-LogP6-Writer-Journald)
+[![Build Status](https://github.com/atroxaper/p6-LogP6-Writer-Journald/workflows/build/badge.svg)](https://github.com/atroxaper/p6-LogP6-Writer-Journald/actions)
 
 # NAME
 
